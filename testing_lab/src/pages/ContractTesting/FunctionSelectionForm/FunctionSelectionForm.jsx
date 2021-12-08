@@ -4,7 +4,7 @@ import FormMenuHeader from "./components/FormMenuHeader";
 import ContractFunctions from "./components/ContractFunctions";
 import { smartContracts } from "../../../config/contractInterface";
 
-const FunctionSelectionForm = (props: any) => {
+const FunctionSelectionForm = (props) => {
   const defaultContract = smartContracts[props.contractIndex];
   const [contractData, setContractData] = useState(defaultContract);
 

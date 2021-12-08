@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import FunctionSelectionForm from "./FunctionSelectionForm/FunctionSelectionForm";
 import InputForm from "./InputForm/InputForm";
-import { smartContracts } from "../../config/contractInterface";
 
-const ContractTesting = (props: any) => {
+const ContractTesting = (props) => {
   const [contractIndex, setContractIndex] = useState(0);
   const [contractFunction, setContractFunction] = useState(null);
 
