@@ -1,9 +1,9 @@
-const legendsLaboratory: string = "0x35f19AE4A9bf787c47bBb4c1258138FbDEfC2810"
-const legendsNFT: string = "0x94753D965B511735CBFB62f05F013E0720733D67"
-const legendToken: string = "0xcbB7DbD8a48Db8c42da8f51DeC32B466616D1455"
-const legendRejuvenation: string = "0x8A0704bc0700939d53cC2b34E85Eb40Dbf31298e"
-const legendsMarketplace: string = "0x870b3f942D1d45cDCb63554fAEc8A55e4860F9D9"
-const legendsMatchingBoard: string = "0xf7aEd0149173420a58e43Ed5F45B70075Ea7200C"
+const legendsLaboratory: string = "0xc74E2d519f95Ced541620728b56859341874EC74"
+const legendsNFT: string = "0xc4fbF5a36c108354CF886d0e1FEaFF61d925E24E"
+const legendToken: string = "0x51E3B6fC1015653eA07668BD7198C323121d7109"
+const legendRejuvenation: string = "0x4bdb990863b667DC9D2A7469716bEa152A18B413"
+const legendsMarketplace: string = "0x48F3A95D0d93C8B462FD8159a9ECe43f92c5a7F2"
+const legendsMatchingBoard: string = "0xf90b12d1d474A947BcE9ed75f2892C59d7582bd1"
 
 export { legendsLaboratory, legendsNFT, legendToken, legendRejuvenation, legendsMarketplace, legendsMatchingBoard }
 

@@ -90,6 +90,7 @@ const InputForm = (props) => {
     <Flex
       p={5}
       h="60%"
+      overflowY="scroll"
       flexDirection="column"
     >
       <form onSubmit={handleSubmit(onSubmit)}>

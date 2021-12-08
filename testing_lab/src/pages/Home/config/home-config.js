@@ -48,6 +48,7 @@ const homeConfig = {
         Parsing directly from the contract ABIs also allows for painless updates of the
         contract testing interface. When new changes are merged into the Smart Contracts
         (prior to launch) the Testing Lab will automatically update as needed.
+        <br /><br />
       </Text>
     ]
   },
@@ -56,7 +57,7 @@ const homeConfig = {
       <Text
         lineHeight={7}
       >
-        More resources and certification guides will be be added shortly. I plan to 
+        More resources and certification guides will be be added shortly. I plan to
         include guides that will walk the tester through the flow of the contract functionalities.
         <br /><br />
         In addition to testing following the guides, simply calling the contract functions with the mindset of exploiting

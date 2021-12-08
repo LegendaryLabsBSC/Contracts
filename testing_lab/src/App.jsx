@@ -6,6 +6,7 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import Home from "./pages/Home/Home";
 import ContractTesting from "./pages/ContractTesting/ContractTesting";
 // import Settings from "./pages/Settings/Settings";
+import './App.css'
 
 const App = () => {
   const [navSize, changeNavSize] = useState("large");

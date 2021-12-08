@@ -38,7 +38,7 @@ async function main(): Promise<any> {
 function loadNewContracts(contracts: LaboratoryContracts) {
   const contract_config: string = path.join(
     __dirname,
-    "../frontend/src/config/contractAddresses.ts"
+    "../testing_lab/src/config/contractAddresses.ts"
   );
 
   fs.readFile(contract_config, "utf-8", (err, data) => {
