@@ -22,24 +22,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-node_modules
-.env
-
-#Hardhat files
-cache
+_tests
+src/components/Interface
 artifacts
-oldcontracts
-
-#
-*-rc*.*
-Notes
-axie.solcontracts/LegendaryTests.sol
-contracts/other
-.vscode
-.VSCodeCounter
-docs
-hold_config
-scans
-phoenixGenerator_1.1
-hold_front
-.yarnclean
