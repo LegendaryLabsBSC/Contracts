@@ -12,24 +12,38 @@ const ContractFunctions = (props) => {
     <Flex
       mt={5}
       style={{ overflow: "hidden" }}
-      width="100%"
+      width="90%"
       height="100%"
       overflow="hidden"
       position="relative"
+
+    // borderWidth={3}
+    // borderColor="red"
     >
       <Flex
         top="0"
+        // mr={2}
         h="77vh"
-        right="-20px"
+        // w="100%"
+        // right="-20px"
         flexDir="column"
         overflowY="scroll"
         overflowX="hidden"
         position="absolute"
+      // alignContent="center"
+      // justify="center"
+
       >
         <Flex
           m={1}
+          w="100%"
           wrap="wrap"
           justify="center"
+          // alignContent="center"
+          // alignItems="center"
+        // flexDir="column"
+        // borderWidth={3}
+        // borderColor="green"
         >
           {props.contractData &&
             props.contractData.abi &&

@@ -57,7 +57,7 @@ const OutputConsole = (props) => {
         <ConsoleHeader />
         <Flex
           position="absolute"
-          bottom="4%"
+          bottom="5%"
           right="5%"
         >
           <TooltipButton
