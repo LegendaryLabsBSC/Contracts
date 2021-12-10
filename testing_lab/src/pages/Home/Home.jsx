@@ -32,10 +32,8 @@ const Home = (props) => {
 
   return (
     <Flex
-      ml={10}
-      mt={5}
       h="90vh"
-      w={props.navSize === "small" ? "82vw" : "74vw"}
+      w={props.navSize === "small" ? "80vw" : "74vw"}
       background="white"
       borderRadius={30}
       boxShadow="0 4px 12px rgba(0,0,0,0.75)"
