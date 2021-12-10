@@ -12,6 +12,7 @@ import {
   FormLabel,
   FormControl,
   FormErrorMessage,
+  Spacer,
 } from '@chakra-ui/react'
 
 const InputForm = (props) => {
@@ -162,6 +163,7 @@ const InputForm = (props) => {
         contractData={smartContracts[props.contractIndex]}
       />
       <FormContext />
+      <Spacer />
       <OutputConsole
         name={name}
         navSize={props.navSize}
