@@ -21,9 +21,6 @@ const ConnectionHowTo = (props) => {
       w="100%"
       flexDir="column"
       alignItems="center"
-
-      // borderWidth={1}
-      // borderColor="red"
     >
       {props.title}
       <Flex

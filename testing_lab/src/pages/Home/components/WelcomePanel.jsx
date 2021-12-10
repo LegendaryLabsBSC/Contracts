@@ -19,7 +19,8 @@ const WelcomePanel = (props) => {
       </Heading>
       <Flex
         ml={3}
-        pr={4}
+        pr={6}
+        pl={4}
         flexDir="column"
         textAlign="justify"
       >

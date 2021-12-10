@@ -59,7 +59,7 @@ const Home = (props) => {
           flexDir="column"
         >
           <WelcomePanel
-            title={homeConfig.welcomePanel.title}
+            title={homeConfig.subtitle({ title: "Welcome To The Testing Lab!" })}
             blurb={homeConfig.welcomePanel.blurb}
           />
           <Flex
@@ -67,8 +67,8 @@ const Home = (props) => {
             alignItems="center"
           >
             <Flex
-              ml={3}
-              pr={2}
+              ml={5}
+              pr={3}
               w="100%"
               flexDir="column"
               borderRightWidth={1}
@@ -81,8 +81,8 @@ const Home = (props) => {
               />
             </Flex>
             <Flex
-              ml={3}
-              pr={2}
+              ml={5}
+              pr={3}
               w="100%"
               flexDir="column"
             >
