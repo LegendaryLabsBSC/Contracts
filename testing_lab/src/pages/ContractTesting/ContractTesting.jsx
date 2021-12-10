@@ -1,3 +1,4 @@
+import { Center, HStack } from "@chakra-ui/react";
 import React, { useState } from "react";
 import FunctionSelectionForm from "./FunctionSelectionForm/FunctionSelectionForm";
 import InputForm from "./InputForm/InputForm";
@@ -13,7 +14,7 @@ const ContractTesting = (props) => {
         setContractIndex={setContractIndex}
         contractIndex={contractIndex}
       />
-    <InputForm
+      <InputForm
         navSize={props.navSize}
         contractFunction={contractFunction}
         contractIndex={contractIndex}

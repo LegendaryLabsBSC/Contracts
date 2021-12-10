@@ -10,8 +10,7 @@ const FunctionSelectionForm = (props) => {
 
   return (
     <Flex
-      ml={5}
-      mt={5}
+      mr="1%"
       w="50vw"
       h="90vh"
       borderRadius={30}

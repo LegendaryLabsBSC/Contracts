@@ -3,7 +3,7 @@ import homeConfig from './config/home-config'
 import WelcomePanel from './components/WelcomePanel'
 import ConnectionHowTo from './components/ConnectionHowTo/ConnectionHowTo'
 import SimpleSubpanel from './components/SimpleSubpanel'
-import { Flex, Heading, Spacer, } from '@chakra-ui/react'
+import { Flex, Heading, } from '@chakra-ui/react'
 
 
 const Home = (props) => {
@@ -42,6 +42,7 @@ const Home = (props) => {
       flexDirection="column"
       overflowY="scroll"
       overflowX="hidden"
+      pos="absolute"
     >
       <MainTitle />
       <Flex

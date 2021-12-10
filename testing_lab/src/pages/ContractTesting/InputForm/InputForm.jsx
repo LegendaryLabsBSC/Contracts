@@ -143,10 +143,8 @@ const InputForm = (props) => {
 
   return (
     <Flex
-      mr={5}
-      mt={5}
       h="90vh"
-      w={props.navSize === "small" ? "33vw" : "25vw"}
+      w={props.navSize === "small" ? "31vw" : "25vw"}
       background="white"
       borderRadius={30}
       flexDirection="column"
