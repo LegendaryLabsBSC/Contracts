@@ -49,6 +49,8 @@ const Home = (props) => {
       <Flex
         id="body"
         mt={1}
+        w="100%"
+        h="100%"
       >
         <Flex
           id="mainPanel"
@@ -60,8 +62,10 @@ const Home = (props) => {
             title={homeConfig.welcomePanel.title}
             blurb={homeConfig.welcomePanel.blurb}
           />
-          <Spacer />
-          <Flex>
+          <Flex
+            h="100%"
+            alignItems="center"
+          >
             <Flex
               ml={3}
               pr={2}

@@ -4,8 +4,7 @@ import { Flex } from '@chakra-ui/react'
 const SimpleSubpanel = (props) => {
   return (
     <Flex
-      h="100%"
-      w="100%"
+      h={400}
       flexDir="column"
       alignItems="center"
     >
