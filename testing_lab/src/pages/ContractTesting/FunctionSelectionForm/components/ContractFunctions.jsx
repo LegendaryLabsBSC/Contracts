@@ -16,9 +16,6 @@ const ContractFunctions = (props) => {
       height="100%"
       overflow="hidden"
       position="relative"
-
-    // borderWidth={3}
-    // borderColor="red"
     >
       <Flex
         top="0"

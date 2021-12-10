@@ -18,12 +18,14 @@ const Home = (props) => {
         pb={2}
         mb={2}
         as='h1'
+        w="75%"
         color="white"
-        fontSize="300%"
+        fontSize="400%"
         fontFamily="Georgia"
         letterSpacing={- 1}
         background="blue.500"
         borderBottomRadius={22}
+        textAlign="center"
       >
         {homeConfig.mainTitle}
       </Heading>
@@ -54,6 +56,8 @@ const Home = (props) => {
           h="100%"
           w="65%"
           flexDir="column"
+          borderRightWidth={2}
+          borderRightColor="blue.500"
         >
           <WelcomePanel
             title={homeConfig.subtitle({ title: "Welcome To The Testing Lab!" })}
@@ -69,7 +73,7 @@ const Home = (props) => {
               w="100%"
               flexDir="column"
               borderRightWidth={1}
-              borderRightColor="black"
+              borderRightColor="blue.500"
             >
               <SimpleSubpanel
                 id="certs"
@@ -97,8 +101,7 @@ const Home = (props) => {
           w="35%"
         >
           <Flex
-            borderLeftWidth={1}
-            borderLeftColor="black"
+
             flexDir="column"
           >
             <ConnectionHowTo
