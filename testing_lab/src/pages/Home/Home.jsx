@@ -1,7 +1,7 @@
 import React from 'react'
 import homeConfig from './config/home-config'
 import WelcomePanel from './components/WelcomePanel'
-import ConnectionHowTo from './components/ConnectionHowTo'
+import ConnectionHowTo from './components/ConnectionHowTo/ConnectionHowTo'
 import SimpleSubpanel from './components/SimpleSubpanel'
 import { Flex, Heading, Spacer, } from '@chakra-ui/react'
 
@@ -40,10 +40,8 @@ const Home = (props) => {
       borderRadius={30}
       boxShadow="0 4px 12px rgba(0,0,0,0.75)"
       flexDirection="column"
-
       overflowY="scroll"
       overflowX="hidden"
-      position="absolute"
     >
       <MainTitle />
       <Flex
@@ -51,6 +49,7 @@ const Home = (props) => {
         mt={1}
         w="100%"
         h="100%"
+        fontSize="115%"
       >
         <Flex
           id="mainPanel"
@@ -106,7 +105,6 @@ const Home = (props) => {
           >
             <ConnectionHowTo
               title={homeConfig.subtitle({ title: "Connecting With MetaMask" })}
-              blurb={homeConfig.subpanel.metamask}
               installLink={homeConfig.softwareLink.metamask}
             />
           </Flex>
