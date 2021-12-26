@@ -450,6 +450,7 @@ contract LegendsNFT is ERC721Enumerable, ILegendMetadata {
         return true;
     }
 
+    // todo: look into if both hatch queries are needed; along with api call
     /**
      * @dev Queries whether a Legend is ready to be *hatched* or not, by reading the Legend's age.
      *
@@ -479,7 +480,7 @@ contract LegendsNFT is ERC721Enumerable, ILegendMetadata {
      *
      * :::important
      *
-     * Whether a Legend has been hatched or not will not incluence the NFT owner's ability to transfer the token.
+     * Whether a Legend has been hatched or not will not influence the NFT owner's ability to transfer the token.
      *
      * :::
      *

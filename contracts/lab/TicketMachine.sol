@@ -243,6 +243,7 @@ abstract contract TicketMachine {
         require(!p.isPromoClosed, "Promo Has Already Closed");
 
         p.isPromoClosed = true;
+        _closedPromos.increment();
 
         emit PromoClosed(
             promoId,
