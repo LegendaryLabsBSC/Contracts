@@ -12,10 +12,6 @@ import "./TicketMachine.sol";
 
 /**
  * @dev Primary controller contract for the Legendary Labs Project
- *
- *
- *
- *
  */
 contract LegendsLaboratory is AccessControlEnumerable, TicketMachine {
     LegendsNFT public legendsNFT = new LegendsNFT();
@@ -30,6 +26,7 @@ contract LegendsLaboratory is AccessControlEnumerable, TicketMachine {
 
     string private _season = "Phoenix";
 
+    // todo: fix naming scheme, naming is confusing
     /** promoId => skipIncubation */
     mapping(uint256 => bool) private _promoIncubated;
 

@@ -47,6 +47,11 @@ export default {
     hardhat: {
       chainId: 1337,
     },
+    fuji: {
+      url: "https://api.avax-test.network/ext/bc/C/rpc",
+      chainId: 43113,
+      accounts: [`0x${PRIVATEKEY}`],
+    },
     ftmtest: {
       url: "https://rpc.testnet.fantom.network/",
       chainId: 0xfa2,
