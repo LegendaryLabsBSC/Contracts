@@ -320,15 +320,6 @@ contract LegendsLaboratory is AccessControlEnumerable, TicketMachine {
     }
 
     /**
-     * @dev Queries whether a Legend is listable or not, [`isListable`](/docs/LegendsNFT#isListable).
-     *
-     * @param legendId ID of Legend being queried
-     */
-    function isListable(uint256 legendId) public view returns (bool) {
-        return legendsNFT.isListable(legendId);
-    }
-
-    /**
      * @dev Returns the current **Legendary Labs** Season
      */
     function fetchSeason() public view returns (string memory) {

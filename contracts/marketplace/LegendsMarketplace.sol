@@ -43,14 +43,6 @@ contract LegendsMarketplace is
      * @dev Creates a new *sale listing*. Calls `_createLegendSale` from [**LegendSale**](./listings/LegendSale#_createlegendsale).
      *
      *
-     * :::caution Requirements:
-     *
-     * * Legend must be considered [*listable*](../lab/LegendsLaboratory#islistable)
-     * * `price` can not be `(0)`
-     *
-     * :::
-     *
-     *
      * :::tip Note
      *
      * Calling this function will transfer the listed Legend NFT to this contract.
@@ -69,14 +61,8 @@ contract LegendsMarketplace is
     ) external nonReentrant {
         IERC721 legendsNFT = IERC721(nftContract);
 
-        require(
-            _lab.isListable(legendId)
-            // , "Not eligible"
-        );
-        require(
-            price != 0
-            // , "Price can not be 0"
-        );
+        require(_lab.isHatched(legendId), "Not Hatched");
+        require(price != 0, "Price can not be 0");
 
         legendsNFT.transferFrom(msg.sender, address(this), legendId);
 
@@ -156,18 +142,10 @@ contract LegendsMarketplace is
 
         address legendOwner = legendsNFT.ownerOf(legendId);
 
-        require(
-            msg.sender != legendOwner
-            // , "Already Owned"
-        );
-        require(
-            _lab.isHatched(legendId)
-            // , "Not eligible"
-        ); // commented out for testing
-        require(
-            msg.value != 0
-            // , "Price can not be 0"
-        );
+        require(msg.sender != legendOwner, "Already Owned");
+        require(_lab.isHatched(legendId), "Not eligible");
+
+        require(msg.value != 0, "Price can not be 0");
 
         uint256 listingId = _makeLegendOffer(
             nftContract,
@@ -262,7 +240,6 @@ contract LegendsMarketplace is
      *
      * :::caution Requirements:
      *
-     * * Legend must be considered [*listable*](../lab/LegendsLaboratory#islistable)
      * * `startingPrice` must not be `(0)`
      * * IF `instantPrice` is not `(0)`, `instantPrice` must be greater than `startingPrice`
      * * `durationIndex` must not be outside of the allowed parameters
@@ -292,15 +269,9 @@ contract LegendsMarketplace is
     ) external nonReentrant {
         IERC721 legendsNFT = IERC721(nftContract);
 
-        require(
-            _lab.isListable(legendId)
-            // , "Not eligible"
-        );
+        require(_lab.isHatched(legendId), "Not Hatched");
 
-        require(
-            startingPrice != 0
-            // , "Price can not be 0"
-        );
+        require(startingPrice != 0, "Price can not be 0");
 
         if (instantPrice != 0) {
             require(instantPrice > startingPrice);
@@ -709,7 +680,9 @@ contract LegendsMarketplace is
      *
      * @param listingId ID of marketplace *listing*
      */
-    function _calculateFees(uint256 listingId)
+    function _calculateFees(
+        uint256 listingId // ? todo: visibility appears to be wrong
+    )
         public
         view
         returns (

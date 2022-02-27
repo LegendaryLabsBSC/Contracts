@@ -59,11 +59,9 @@ contract LegendsMatchingBoard is LegendMatching, ReentrancyGuard {
     ) external nonReentrant {
         IERC721 legendsNFT = IERC721(nftContract);
 
-        require(
-            _lab.isListable(legendId),
-            "Caller Is Not Owner Or Legend Has Not Hatched"
-        );
+        require(_lab.isHatched(legendId), "Not Hatched");
         require(_lab.isBlendable(legendId));
+        
         require(price != 0, "Price Can Not Be 0");
 
         legendsNFT.transferFrom(msg.sender, address(this), legendId);
@@ -123,10 +121,7 @@ contract LegendsMatchingBoard is LegendMatching, ReentrancyGuard {
             "Seller Not Authorized To Purchase Own Matching"
         );
 
-        require(
-            _lab.isListable(legendId),
-            "Caller Is Not Owner Or Legend Has Not Hatched"
-        );
+        require(_lab.isHatched(legendId), "Not Hatched");
         require(_lab.isBlendable(legendId));
 
         legendsNFT.transferFrom(msg.sender, address(this), legendId);

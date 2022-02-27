@@ -7,7 +7,7 @@ import {
   LegendRejuvenation,
   LegendsMarketplace,
   LegendsMatchingBoard,
-} from "./contractABIs";
+} from "./contract-ABIs";
 
 import {
   legendsLaboratory,
@@ -16,7 +16,7 @@ import {
   legendRejuvenation,
   legendsMarketplace,
   legendsMatchingBoard,
-} from "./contractAddresses";
+} from "./contract-addresses";
 
 declare global {
   interface Window {

@@ -74,10 +74,7 @@ contract LegendRejuvenation is IRejuvenationPod, ReentrancyGuard {
         IERC721 legendsNFT = IERC721(nftContract);
         RejuvenationPod storage r = _rejuvenationPod[legendId];
 
-        require(
-            _lab.isListable(legendId),
-            "Caller Is Not Owner Or Legend Has Not Hatched"
-        );
+        require(_lab.isHatched(legendId), "Not Hatched");
 
         require(!r.occupied, "Legend Already Occupying Pod");
 

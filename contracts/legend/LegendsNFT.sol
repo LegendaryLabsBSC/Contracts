@@ -24,7 +24,7 @@ import "./ILegendMetadata.sol";
  *
  * :::important
  *
- * Legends will be given a temporary *Incubation URI*  when minted, prior to recieveing their
+ * Legends will be given a temporary *Incubation URI*  when minted, prior to receiving their
  * permanent *DNA-Generated URI* via `hatchLegend`
  *
  * :::
@@ -59,12 +59,11 @@ contract LegendsNFT is ERC721Enumerable, ILegendMetadata {
     KinBlendingLevel private _kinBlendingLevel;
 
     string[5] private _incubationViews = [
-        // replace with Chucks incubators
-        "ipfs://QmewiUnCt6cgadmci4M2s2jnDNx1y5gTQ2Qi5EX4EXBbNG",
-        "ipfs://QmewiUnCt6cgadmci4M2s2jnDNx1y5gTQ2Qi5EX4EXBbNG",
-        "ipfs://QmewiUnCt6cgadmci4M2s2jnDNx1y5gTQ2Qi5EX4EXBbNG",
-        "ipfs://QmewiUnCt6cgadmci4M2s2jnDNx1y5gTQ2Qi5EX4EXBbNG",
-        "ipfs://QmewiUnCt6cgadmci4M2s2jnDNx1y5gTQ2Qi5EX4EXBbNG"
+        "ipfs://QmXqGQ8SaUm7csatQVAATehnEQb2zdZHcFVxLdYDqB3NXJ",
+        "ipfs://QmRnAJ481tWfgYKxHYCdYTQsWT42WEEdUr7BaaBRf2RX1F",
+        "ipfs://QmZr7WR3Y9RzxKKbzKvkAHknaoFXNcwFNSH79eXjM7KkdV",
+        "ipfs://QmSLZ6LQKboFHxcazkraAbVJQBV98i1hx6pDpLwqMienGw",
+        "ipfs://QmeoRrumK4hNLbyBxQzXtA81XUJtM2hHcgXB7V7TdaKtM6"
     ];
 
     uint256 private _blendingLimit = 5;
@@ -264,7 +263,8 @@ contract LegendsNFT is ERC721Enumerable, ILegendMetadata {
         string calldata prefix,
         string calldata postfix
     ) external {
-        require(isListable(legendId));
+        require(ownerOf(legendId) == msg.sender, "Not Owner");
+        require(isHatched(legendId), "Legend Not Hatched");
 
         _legendMetadata[legendId].prefix = prefix;
         _legendMetadata[legendId].postfix = postfix;
@@ -512,19 +512,6 @@ contract LegendsNFT is ERC721Enumerable, ILegendMetadata {
         returns (bool)
     {
         return _parentOf[parentLegendId][childLegendId];
-    }
-
-    /**
-     * @dev Queries whether a Legend can be used in the **Marketplace**, **MatchingBoard, or **RejuvenationPod**.
-     *
-     * @param legendId ID of Legend being queried
-     */
-    function isListable(uint256 legendId) public view returns (bool) {
-        // change to isUsable/syn ?
-        if (ownerOf(legendId) != msg.sender) return false;
-        if (!isHatched(legendId)) return false;
-
-        return true;
     }
 
     /**
